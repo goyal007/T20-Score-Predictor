@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<!-- Latest compiled and minified CSS -->
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+<style>
+input[type=text],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.formm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+
+<body>
+<div class="container">
+	
+
+
+<div>
+	<nav class="navbar navbar-expand-sm bg-info text-white justify-content-center ">
+		<h3>T20 Score Predictor</h3>
+	</nav>
+</div>
+
+<div class="mt-2">
+	
+
+  <form class="formm" id="upload-data" action="/predict" method="POST">
+  	<div class="row">
+  		<div class="col-4" >
+    <label for="BattingTeam">Batting Team</label>
+   
+    <select id="BattingTeam" name="BattingTeam">
+    	<option value="none" selected disabled hidden>
+          Select Batting Team
+      </option>
+    	<option value="New Zealand">New Zealand</option>
+		<option value="Sri Lanka">Sri Lanka</option>
+		<option value="India">India</option>
+		<option value="Bangladesh">Bangladesh</option>
+		<option value="Netherlands">Netherlands</option>
+		<option value="Pakistan">Pakistan</option>
+		<option value="West Indies">West Indies</option>
+		<option value="Zimbabwe">Zimbabwe</option>
+		<option value="Australia">Australia</option>
+		<option value="England">England</option>
+		<option value="South Africa">South Africa</option>
+		<option value="Afghanistan">Afghanistan</option>
+		<option value="Ireland">Ireland</option>
+    </select>
+    	 </div>
+   <div class="col-4" >
+   <label for="BowlingTeam">Bowling Team</label>
+    <select id="BowlingTeam" name="BowlingTeam">
+    	<option value="none" selected disabled hidden>
+          Select Bowling Team
+      </option>
+    	<option value="New Zealand">New Zealand</option>
+		<option value="Sri Lanka">Sri Lanka</option>
+		<option value="India">India</option>
+		<option value="Bangladesh">Bangladesh</option>
+		<option value="Netherlands">Netherlands</option>
+		<option value="Pakistan">Pakistan</option>
+		<option value="West Indies">West Indies</option>
+		<option value="Zimbabwe">Zimbabwe</option>
+		<option value="Australia">Australia</option>
+		<option value="England">England</option>
+		<option value="South Africa">South Africa</option>
+		<option value="Afghanistan">Afghanistan</option>
+		<option value="Ireland">Ireland</option>
+    </select>
+</div>
+    <div class="col-4" >
+
+    <label for="city">City</label>
+    <select id="city" name="city">
+    	<option value="none" selected disabled hidden>
+          Select city
+      </option>
+	    <option value="Wellington">Wellington</option>
+		<option value="Colombo">Colombo</option>
+		<option value="Christchurch">Christchurch</option>
+		<option value="Harare">Harare</option>
+		<option value="Auckland">Auckland</option>
+		<option value="Hyderabad">Hyderabad</option>
+		<option value="Durban">Durban</option>
+		<option value="Pallekele">Pallekele</option>
+		<option value="Abu Dhabi">Abu Dhabi</option>
+		<option value="Mirpur">Mirpur</option>
+		<option value="Dhaka">Dhaka</option>
+		<option value="Lauderhill">Lauderhill</option>
+		<option value="Kimberley">Kimberley</option>
+		<option value="Adelaide">Adelaide</option>
+		<option value="Cape Town">Cape Town</option>
+		<option value="Coolidge">Coolidge</option>
+		<option value="Chandigarh">Chandigarh</option>
+		<option value="Pune">Pune</option>
+		<option value="Canberra">Canberra</option>
+		<option value="Port Elizabeth">Port Elizabeth</option>
+		<option value="Delhi">Delhi</option>
+		<option value="Antigua">Antigua</option>
+		<option value="Hambantota">Hambantota</option>
+		<option value="Barbados">Barbados</option>
+		<option value="Sharjah">Sharjah</option>
+		<option value="Kolkata">Kolkata</option>
+		<option value="St George's">St George's</option>
+		<option value="Dubai">Dubai</option>
+		<option value="Bready">Bready</option>
+		<option value="St Kitts">St Kitts</option>
+		<option value="Sylhet">Sylhet</option>
+		<option value="Sydney">Sydney</option>
+		<option value="London">London</option>
+		<option value="Cardiff">Cardiff</option>
+		<option value="Visakhapatnam">Visakhapatnam</option>
+		<option value="Lahore">Lahore</option>
+		<option value="Basseterre">Basseterre</option>
+		<option value="Centurion">Centurion</option>
+		<option value="Nagpur">Nagpur</option>
+		<option value="Johannesburg">Johannesburg</option>
+		<option value="Manchester">Manchester</option>
+		<option value="St Lucia">St Lucia</option>
+		<option value="Melbourne">Melbourne</option>
+		<option value="Mumbai">Mumbai</option>
+		<option value="Gros Islet">Gros Islet</option>
+		<option value="Hamilton">Hamilton</option>
+		<option value="Napier">Napier</option>
+		<option value="Chattogram">Chattogram</option>
+		<option value="Karachi">Karachi</option>
+		<option value="Dominica">Dominica</option>
+		<option value="Dharamsala">Dharamsala</option>
+		<option value="Birmingham">Birmingham</option>
+		<option value="Nottingham">Nottingham</option>
+		<option value="Dublin">Dublin</option>
+		<option value="Rotterdam">Rotterdam</option>
+		<option value="Al Amarat">Al Amarat</option>
+		<option value="Mount Maunganui">Mount Maunganui</option>
+		<option value="Bristol">Bristol</option>
+		<option value="Chester-le-Street">Chester-le-Street</option>
+		<option value="Ranchi">Ranchi</option>
+		<option value="Cuttack">Cuttack</option>
+		<option value="Greater Noida">Greater Noida</option>
+		<option value="Perth">Perth</option>
+		<option value="Brisbane">Brisbane</option>
+		<option value="Guyana">Guyana</option>
+		<option value="Lucknow">Lucknow</option>
+		<option value="Bulawayo">Bulawayo</option>
+		<option value="Nelson">Nelson</option>
+		<option value="Dehradun">Dehradun</option>
+		<option value="Southampton">Southampton</option>
+		<option value="Rajkot">Rajkot</option>
+		<option value="Belfast">Belfast</option>
+		<option value="Thiruvananthapuram">Thiruvananthapuram</option>
+		<option value="Dunedin">Dunedin</option>
+		<option value="Guwahati">Guwahati</option>
+		<option value="Nairobi">Nairobi</option>
+		<option value="Indore">Indore</option>
+		<option value="Hobart">Hobart</option>
+		<option value="Jamaica">Jamaica</option>
+		<option value="Edinburgh">Edinburgh</option>
+		<option value="Bengaluru">Bengaluru</option>
+		<option value="St Vincent">St Vincent</option>
+		<option value="Paarl">Paarl</option>
+		<option value="Khulna">Khulna</option>
+		<option value="Trinidad">Trinidad</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Derry">Derry</option>
+		<option value="King City">King City</option>
+		<option value="The Hague">The Hague</option>
+		<option value="Ahmedabad">Ahmedabad</option>
+		<option value="Providence">Providence</option>
+		<option value="Leeds">Leeds</option>
+		<option value="Kandy">Kandy</option>
+		<option value="Rawalpindi">Rawalpindi</option>
+		<option value="Kanpur">Kanpur</option>
+		<option value="Victoria">Victoria</option>
+		<option value="Potchefstroom">Potchefstroom</option>
+		<option value="Bridgetown">Bridgetown</option>
+		<option value="Bloemfontein">Bloemfontein</option>
+		<option value="Taunton">Taunton</option>
+		<option value="Carrara">Carrara</option>
+    </select>
+  </div>
+</div>
+<div class="row" style="margin-top: 25px;">
+	<div class="col-3" >
+    <label for="Innings">Innings</label>
+    <select id="Innings" name="Innings">
+    	<option value="none" selected disabled hidden>
+          Select innings
+      </option>
+    	<option value=1 >1st Innings</option>
+		<option value=2>2nd Innings</option>
+    </select>
+</div>
+<div class="col-3" >
+    <label for="Over">Over</label>
+    <select id="Over" name="Over">
+    	<option value="none" selected disabled hidden>
+          Select Over
+      </option>
+    	<option value=0>0</option>
+		<option value=1>1</option>
+		<option value=2>2</option>
+		<option value=3>3</option>
+		<option value=4>4</option>
+		<option value=5>5</option>
+		<option value=6>6</option>
+		<option value=7>7</option>
+		<option value=8>8</option>
+		<option value=9>9</option>
+		<option value=10>10</option>
+		<option value=11>11</option>
+		<option value=12>12</option>
+		<option value=13>13</option>
+		<option value=14>14</option>
+		<option value=15>15</option>
+		<option value=16>16</option>
+		<option value=17>17</option>
+		<option value=18>18</option>
+		<option value=19>19</option>
+    </select>
+</div>
+<div class="col-3" >
+    <label for="Ball">Ball</label>
+    <select id="Ball" name="Ball">
+    	<option value="none" selected disabled hidden>
+          Select an Option
+      </option>
+    	<option value=1>1</option>
+		<option value=2>2</option>
+		<option value=3>3</option>
+		<option value=4>4</option>
+		<option value=5>5</option>
+		<option value=6>6</option>
+    </select>
+</div>
+<div class="col-3" >
+		<label for="Score">Score</label>
+    	<input type="number" id="Score" name="Score" min="0" max="720">
+	</div>
+</div>
+<div class="row" style="margin-top: 25px;">
+	
+	<div class="col-4" >
+		<label for="WicketsLeft">Wickets Left</label>
+    	<input type="number" id="WicketsLeft" name="WicketsLeft" min="0" max="10">
+	</div>
+	<div class="col-4" >
+		<label for="RunsInLastFive">Runs In Last 5 Overs</label>
+    	<input type="number" id="RunsInLastFive" name="RunsInLastFive" min="0" max="180">
+	</div>
+	<div class="col-4" >
+		<label for="WicketsInLastFive">Wickets In Last 5 Overs</label>
+    	<input type="number" id="WicketsInLastFive" name="WicketsInLastFive" min="0" max="10">
+	</div>
+
+
+</div>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+</body>
+</html>
+
+

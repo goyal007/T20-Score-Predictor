@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<!-- Latest compiled and minified CSS -->
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<style>
+select {
+	appearance: none;
+}
+
+input[type=text],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.formm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+
+<body>
+<div class="container">
+	
+
+
+<div>
+	<nav class="navbar navbar-expand-sm bg-info text-white justify-content-center ">
+		<h3>T20 Score Predictor</h3>
+	</nav>
+</div>
+
+<div class="mt-2">
+	
+
+  <form class="formm" id="upload-data">
+  	<div class="row">
+  		<div class="col-4" >
+    <label for="BattingTeam">Batting Team</label>
+   
+    <select id="BattingTeam" name="BattingTeam">
+    	<option value={{BattingTeam}} selected disabled hidden>
+          {{BattingTeam}} 
+      </option>
+    </select>
+    	 </div>
+   <div class="col-4" >
+   <label for="BowlingTeam">Bowling Team</label>
+    <select id="BowlingTeam" name="BowlingTeam">
+    	<option value="none" selected disabled hidden>
+          {{BowlingTeam}}
+ 		</option>
+    </select>
+</div>
+    <div class="col-4" >
+
+    <label for="city">City</label>
+    <select id="city" name="city">
+    	<option value="none" selected disabled hidden>
+          {{city}}
+      	</option>
+    </select>
+  </div>
+</div>
+<div class="row" style="margin-top: 25px;">
+	<div class="col-3" >
+    <label for="Innings">Innings</label>
+    <select id="Innings" name="Innings">
+    	<option value="none" selected disabled hidden>
+          {{Innings}}
+      </option>
+    	
+    </select>
+</div>
+<div class="col-3" >
+    <label for="Over">Over</label>
+    <select id="Over" name="Over">
+    	<option value="none" selected disabled hidden>
+          {{Over}}
+      </option>
+    	
+    </select>
+</div>
+<div class="col-3" >
+    <label for="Ball">Ball</label>
+    <select id="Ball" name="Ball">
+    	<option value="none" selected disabled hidden>
+          {{Ball}}
+    	</option>
+    </select>
+</div>
+<div class="col-3" >
+		<label for="Score">Score</label>
+    	
+	    	<select id="Score" name="Score">
+	    	<option value="none" selected disabled hidden>
+	          {{Score}}
+	    	</option>
+	    	</select>
+	</div>
+</div>
+<div class="row" style="margin-top: 25px;">
+	
+	<div class="col-4" >
+		<label for="WicketsLeft">Wickets Left</label>
+    	<select id="WicketsLeft" name="WicketsLeft">
+	    	<option value="none" selected disabled hidden>
+	          {{WicketsLeft}}
+	    	</option>
+	    	</select>
+	</div>
+	<div class="col-4" >
+		<label for="RunsInLastFive">Runs In Last 5 Overs</label>
+    	<select id="RunsInLastFive" name="RunsInLastFive">
+	    	<option value="none" selected disabled hidden>
+	          {{RunsInLastFive}}
+	    	</option>
+	    	</select>
+	</div>
+	<div class="col-4" >
+		<label for="WicketsInLastFive">Wickets In Last 5 Overs</label>
+    	<select id="WicketsInLastFive" name="WicketsInLastFive">
+	    	<option value="none" selected disabled hidden>
+	          {{WicketsInLastFive}}
+	    	</option>
+	    	</select>
+	</div>
+
+
+</div>
+
+    <input type="button" value="{{ "Predicted Score - " ~ n }}">
+  </form>
+</div>
+</div>
+
+</body>
+</html>
+
+
