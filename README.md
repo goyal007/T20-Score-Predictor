@@ -1,2 +1,3 @@
 # T20-Score-Predictor
-T20 International Score Prediction
+
+Deployed Link: http://t20-score-predictor.herokuapp.com
